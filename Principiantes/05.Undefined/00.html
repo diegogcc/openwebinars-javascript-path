@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS:Undefined</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //* UNDEFINED
+        console.log(a);     // undefined
+        var a = 'testing var';
+        console.log(a);     //  'testing var'
+
+        //console.log(b);     //Uncaught ReferenceError: Cannot access 'b' before initialization
+        let b = 'other variable';
+        console.log(b);     // 'other variable'
+        
+        //* NULL
+        console.log(c)      //undefined
+        var c = null;
+        console.log(c)      // null
+
+        console.log(d)      // Uncaught ReferenceError: Cannot access 'd' before initialization
+        let d = null;
+        console.log(d)      // null
+    </script>
+</body>
+</html>

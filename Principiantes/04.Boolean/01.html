@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS:Boolean</title>
+</head>
+<body>
+    <p class="text-block"></p>
+    <script type="text/javascript">
+        /*
+            Mostrar una información al usuario dependiendo de si está
+            conectado o no.
+            Mensaje si NO está conectado: 
+                'Debes registrarte para leer este artículo'
+            Mensaje si SÍ está conectado:
+                'Haz click aquí para ver el contenido'
+        */
+        const USER_LOGGED = false;
+        const TEXT_BLOCK = document.querySelector('.text-block')
+        if (USER_LOGGED)    {
+            TEXT_BLOCK.innerHTML = 'Haz click aquí para ver el contenido'
+        } else {
+            TEXT_BLOCK.innerHTML = 'Debes registrarte para leer este artículo'
+        }
+    </script>
+</body>
+</html>

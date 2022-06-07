@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS:Functions2 params</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function sum(a, b){
+            console.log(a + b);
+        }
+        sum(2,5)    // 7
+        sum(8,3)    // 11
+        sum(2,9)    // 11
+        sum(1,14)   // 15
+
+        // default value 
+        function sayHello(name='Diego'){
+            console.log('Hello ' + name)
+        }
+        sayHello()          // 'Hello Diego'
+        sayHello('Natalia') // 'Hello Natalia'
+    </script>
+</body>
+</html>

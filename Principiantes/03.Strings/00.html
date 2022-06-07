@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS:Strings</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // concatenar
+        console.log('Hello ' + 'World')
+        // template literals
+        let name = 'Cristina';
+        console.log('Hello' + name);
+        console.log('Hello ${name}');
+        // typeof
+        console.log(typeof name)
+        // .length
+        console.log(name.length)        //* 8
+        // .includes()
+        console.log(name.includes('x')) //* false
+        // .slice()
+        console.log(name.slice(2, 5))   //* ist
+        // .replace()
+        console.log(name.replace('na', 'nita')) //* Cristinita
+        // .trim()
+        let notTrimmed = '  text with   spaces '
+        console.log(notTrimmed.trim())  //* 'text with   spaces'
+        // .split()
+        let geoLocation = 'Catalunya, Barcelona, Sants'
+        console.log(geoLocation.split(',')) //* (3) ['Catalunya', ' Barcelona', ' Sants']
+    </script>
+</body>
+</html>

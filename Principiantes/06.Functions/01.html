@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS:Functions</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const MESSAGE = 'Hello world';  // global
+        function sayHello(){
+            const MESSAGE_LOCAL = "Heyyyy";   // local
+            console.log('Global variable from function '+MESSAGE)
+        }
+        sayHello();
+        console.log(MESSAGE);           // 'Hello world'
+        console.log(MESSAGE_LOCAL);     // Uncaught ReferenceError: MESSAGE_LOCAL is not defined
+    </script>
+</body>
+</html>
