@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+    <style>
+        #parrafo_cambio_id {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="parrafo">Practica DOM</p>
+
+    <script type="text/javascript">
+        var parrafo = document.getElementById('parrafo');
+        console.log(parrafo);       // <p id="parrafo">Practica DOM</p>
+        console.log(parrafo.innerText)  // Practica DOM
+
+        var parrafo2 = document.getElementsByTagName('p');
+        console.log(parrafo2);      // HTMLCollection [p#parrafo, parrafo: p#parrafo]
+
+        parrafo.id = 'parrafo_cambio_id';
+        console.log(parrafo);       //<p id="parrafo_cambio_id">Practica DOM</p>
+        
+        parrafo.style.backgroundColor = 'black';
+    </script>
+</body>
+</html>

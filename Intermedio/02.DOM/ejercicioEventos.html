@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS: Ejericio eventos</title>
+</head>
+<body>
+    <input id="input_tareas"/>
+    <button id="button_tareas">Agregar Tarea</button>
+    <ul id="lista_tareas"></ul>
+    
+    <script type="text/javascript">
+        /*
+        Agregar un input y un botón para crear elementos en la lista de TODO.
+        capturar evento del botón y crear el elemento en la lista según el contenido del input.
+        */
+        var tareas = [];
+        var todoList = document.getElementById('lista_tareas');
+        var inputTarea = document.getElementById('input_tareas');
+        var buttonTarea = document.getElementById('button_tareas');
+        
+        buttonTarea.addEventListener('click', function(event){
+            console.log(event);
+            agregarTarea();
+        });
+
+        function agregarTarea(){
+            var li = document.createElement('li');
+            li.textContent = inputTarea.value;
+            todoList.appendChild(li);
+        };
+    </script>
+</body>
+</html>

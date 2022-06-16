@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+</head>
+<body>
+    <ul id="todo_list">
+
+    </ul>
+    <script type="text/javascript">
+        var tareas = [
+            'Tender la cama',
+            'Barrer',
+            'Lavar ropa'
+        ];
+
+        var todoList = document.querySelector('#todo_list');
+
+        for (var i = 0; i < tareas.length; i++){
+            var tarea = tareas[i];
+
+            var li = document.createElement('li');
+            li.textContent = tarea;
+            li.id = 'elemento_' + i;
+
+            todoList.appendChild(li);
+        }
+        setTimeout(function(){
+            var elementoAEliminar = document.getElementById('elemento_2');
+    
+            todoList.removeChild(elementoAEliminar);
+        }, 2000)
+    </script>
+</body>
+</html>

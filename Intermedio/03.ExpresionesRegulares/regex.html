@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS: Regex</title>
+</head>
+<body>
+    <p>Expresiones Regulares</p>
+    <script type="text/javascript">
+        /*
+        Flags 
+        d:  generate indices for substring matches
+        g:  global search
+        i:  case-insensitive search
+        m:  multi-line search
+        s:  allows '.' to math newline characters
+        u:  'unicode'; treat a pattern as a sequence of unicode code points
+        y:  perform a 'sticky' search that matches starting at the current position in the target string
+        */
+        
+
+        var texto = "Hola";
+        var regExp = /^[a-z]$/g;
+        
+        console.log(regExp.test(texto));       // false
+        console.log(texto.search(regExp));     // -1
+        
+        var regExp2 = /h.l./;
+        var texto2 = 'hola';
+        console.log(regExp2.test(texto2));      // true
+        console.log(texto2.search(regExp2));    // 0
+    </script>
+</body>
+</html>
